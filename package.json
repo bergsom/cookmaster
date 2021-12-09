@@ -1,0 +1,27 @@
+{
+  "name": "cookmaster",
+  "version": "1.0.0",
+  "description": "Projeto aap web backend para cadastro de usuários e receitas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bergsom/cookmaster.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bergsom/cookmaster/issues"
+  },
+  "homepage": "https://github.com/bergsom/cookmaster#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  }
+}
