@@ -5,6 +5,7 @@ const PORT = 5000;
 const app = express();
 app.use(express.json());
 app.use(cors());
+const users = require('./models/user.model')
 
 // console com o banco de dados mongoDB
 mongoose.connect('mongodb://localhost:27017/Cookmaster', {
@@ -23,11 +24,21 @@ mensagem: 'você acessou a rota GET /index',
     });
 });
 
-app.post('/novoUsuario', (req,res) => {
+app.post('/novoUsuario', async (req,res) => {
     const dados = req.body;
-    console.log(dados);
+    //console.log(dados);
+    await Users.create(dados).then((user) => {
+        return res.status(201).json({
+            users.create(dados)
+            
+        });
+    }).catch((err) => {
+        return res.status(400).json({
+            err
+        })
+    })
 })
 
 app.listen(PORT, () => {
-    console.log(`servidor rodando na porta ${PORT}`);
+    console.log('servidor rodando na porta ${PORT}');
 });
